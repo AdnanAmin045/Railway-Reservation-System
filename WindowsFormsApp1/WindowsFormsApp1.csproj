@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83F63D95-EE1D-404A-A30B-49E4ECC00E3F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addInformation.Designer.cs">
+      <DependentUpon>addInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addTrainInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addTrainInformation.Designer.cs">
+      <DependentUpon>addTrainInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminData.cs" />
+    <Compile Include="adminDL.cs" />
+    <Compile Include="adminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminMenu.Designer.cs">
+      <DependentUpon>adminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cancelTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cancelTrain.Designer.cs">
+      <DependentUpon>cancelTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeCategory.Designer.cs">
+      <DependentUpon>changeCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changePrice.Designer.cs">
+      <DependentUpon>changePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeSeats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeSeats.Designer.cs">
+      <DependentUpon>changeSeats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeTrain.Designer.cs">
+      <DependentUpon>changeTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteTrain.Designer.cs">
+      <DependentUpon>deleteTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="feedback.Designer.cs">
+      <DependentUpon>feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="feedbackDL.cs" />
+    <Compile Include="passenger.cs" />
+    <Compile Include="passengerDL.cs" />
+    <Compile Include="passengerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="passengerMenu.Designer.cs">
+      <DependentUpon>passengerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seeFeedbackcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seeFeedbackcs.Designer.cs">
+      <DependentUpon>seeFeedbackcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signIn.Designer.cs">
+      <DependentUpon>signIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signUpRecord.cs" />
+    <Compile Include="train.cs" />
+    <Compile Include="trainDL.cs" />
+    <Compile Include="update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update.Designer.cs">
+      <DependentUpon>update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewPassenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewPassenger.Designer.cs">
+      <DependentUpon>viewPassenger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewRecord.Designer.cs">
+      <DependentUpon>viewRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewTrain.Designer.cs">
+      <DependentUpon>viewTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewTrainDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewTrainDetail.Designer.cs">
+      <DependentUpon>viewTrainDetail.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addInformation.resx">
+      <DependentUpon>addInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addTrainInformation.resx">
+      <DependentUpon>addTrainInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminMenu.resx">
+      <DependentUpon>adminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cancelTrain.resx">
+      <DependentUpon>cancelTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeCategory.resx">
+      <DependentUpon>changeCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changePrice.resx">
+      <DependentUpon>changePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeSeats.resx">
+      <DependentUpon>changeSeats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeTrain.resx">
+      <DependentUpon>changeTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteTrain.resx">
+      <DependentUpon>deleteTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="feedback.resx">
+      <DependentUpon>feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="passengerMenu.resx">
+      <DependentUpon>passengerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seeFeedbackcs.resx">
+      <DependentUpon>seeFeedbackcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signIn.resx">
+      <DependentUpon>signIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update.resx">
+      <DependentUpon>update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewPassenger.resx">
+      <DependentUpon>viewPassenger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewRecord.resx">
+      <DependentUpon>viewRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewTrain.resx">
+      <DependentUpon>viewTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewTrainDetail.resx">
+      <DependentUpon>viewTrainDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-rajat-jain-325200.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-felix-mittermeier-2832046.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-madison-inouye-1101122.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-tuur-tisseghem-179153.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

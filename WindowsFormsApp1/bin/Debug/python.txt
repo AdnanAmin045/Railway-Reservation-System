@@ -1,0 +1,90 @@
+UserClass
+
+class MUser:
+userName = ""
+userPassword = ""
+userRole = ""
+def __init__(self, userName, userPassword, userRole):
+self.userName = userName
+self.userPassword = userPassword
+self.userRole = userRole
+def isAdmin(self):
+if (self.userRole == "Admin"):
+return True
+else:
+return False
+
+UserUI
+
+from MUser import MUser
+class MUserDL:
+usersList = []
+@staticmethod
+def addUserIntoList(user):
+MUserDL.usersList.append(user)
+@staticmethod
+def SignIn(user):
+for storedUser in MUserDL.usersList:
+if(storedUser.userName == user.userName and
+storedUser.userPassword == user.userPassword):
+return storedUser
+return None
+@staticmethod
+def parseData(line):
+line = line.split(",")
+return line[0], line[1], line[2]
+
+def readDataFromFile(path):
+if (os.path.exists(path)):
+fileVariable = open(path, 'r')
+records = fileVariable.read().split("\n")
+fileVariable.close()
+for line in records:
+userName, userPassword, userRole =
+MUserDL.parseData(line)
+user = MUser(userName, userPassword,
+userRole)
+MUserDL.addUserIntoList(user)
+return True
+else:
+return False
+@staticmethod
+def storeUserIntoFile(user, path):
+file = open(path, 'a')
+file.write("\n" + user.userName + "," +
+user.userPassword + "," + user.userRole)
+file.close()
+
+main
+
+if __name__ == "__main__":
+main()
+from MUserDL import MUserDL
+from MUserUI import MUserUI
+import os
+from time import sleep
+# Defining Main Function
+def main():
+path = "Data.txt"
+MUserDL.readDataFromFile(path)
+option = 0
+while (option != 3):
+os.system("cls")
+option = MUserUI.menu()
+if (option == 1):
+user = MUserUI.takeInputwithOutRole()
+user = MUserDL.SignIn(user)
+if (user != None):
+if (user.isAdmin()):
+print("This is Admin")
+#Admin Menu
+else:
+print("This is User")
+#User Menu
+sleep(3)
+elif (option == 2):
+user = MUserUI.TakeInputFromConsole()
+MUserDL.addUserIntoList(user)
+MUserDL.storeUserIntoFile(user, path)
+
+

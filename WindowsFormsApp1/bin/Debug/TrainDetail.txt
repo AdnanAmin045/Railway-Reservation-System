@@ -1,0 +1,2 @@
+TezGumDown,390,Multan-to-Karachi,4500,9000
+KhaibarMail,250,Lahore-to-Karachi,23000,40000
